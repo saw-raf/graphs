@@ -32,7 +32,7 @@ int main()
 		scanf("%d %d",&a,&b);
 		A[a][b]=1;
 	}
-	printf("   ");
+	printf("   ");//wypisywanie macierzy
 	for(i=0;i<n;i++)
 		printf("%3d",i);
 	puts("");
