@@ -44,6 +44,17 @@ int main()
 			printf("%3d",(int)A[i][j]);
 		puts("");
 	}
+
+	for(i=0;i<n;i++)//wypisywanie stopnia wierzcholka
+	{
+		int stopien=0;
+		for(j=0;j<n;j++)
+			if(A[i][j]==1)
+				stopien++;
+		if(A[i][i]==1)//przypadek gdy mamy petle
+			stopien++;
+		printf("Wierzcholek {%d} ma stopien: %d\n",i,stopien);
+	}
 	return 0;
 }
 
