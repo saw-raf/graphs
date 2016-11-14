@@ -35,7 +35,6 @@ int main()
 		puts("");
 	}
 
-
 	for(i=0;i<n;i++)//wyswietlanie sasiadow
 	{
 		printf("Dla wierzcholka {%d} sasiadami sa: ",i);
@@ -50,55 +49,22 @@ int main()
 		}
 		puts("");
 	}
-	for(i=0;i<n;i++)//wyswietlanie sasiadow
+
+for(i=0;i<n;i++)//wyswietlanie sasiadow
 	{
-		printf("Podwojne krawedzie to: ");
+		printf("Dla wierzcholka {%d} sasiadami sa: ",i);
 		for(j=0;j<m;j++)
 		{
 			if(A[i][j]==1)
 			{
-				int wiersz;
 				for(int k=0;k<n;k++)
 					if(A[k][j]==-1)
-						wiersz=k;
-
-				for(int l=0;l<m;l++)
-					if(A[i][l]==-1)
-						if(A[wiersz][l]==1)
-							printf("%d %d\n",j,l);
-			}
-		}
-		puts("");
-	}
-
-
-	for(i=0;i<n;i++)//wyswietlanie dla kogo jest sasaidem
-	{
-		printf("Wierzcholek {%d} jest sasiadem dla: ",i);
-		for(j=0;j<m;j++)
-		{
-			if(A[i][j]==-1)
-			{
-				for(int k=0;k<n;k++)
-					if(A[k][j]==1)
 						printf("%d ",k);
 			}
 		}
 		puts("");
 	}
 
-	for(i=0;i<n;i++)//czy wierzcholek jest izolowany
-	{
-		int checker=1;
-		j=0;
-		while(j<m && checker==1)
-		{
-			if(A[i][j]!=0)
-				checker=0;
-			j++;
-		}
-		if(checker==1)
-			printf("!!! Wierzcholek {%d} jest izolowany\n",i);
-	}
+
 	return 0;
 }
